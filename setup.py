@@ -1,4 +1,4 @@
-# creating package
+# creating resolver
 from setuptools import setup as s, find_packages
 
 s(
