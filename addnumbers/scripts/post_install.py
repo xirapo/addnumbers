@@ -2,13 +2,15 @@ import pathlib, os, sys, shutil
 
 current =pathlib.Path(__file__).parent.absolute()
 list_of_files =os.listdir(current)
+FILES_TO_BE_MOVE = [
+    '__init__.py',
+    'main.py'
+]
 
 def install():
     pth = sys.argv[1]
     print("Running Post Install...")
     print(f"new folder path: {pth}")
-    for root, dirs, files in os.walk(current):
-        for f in files:
-            if f.endswith('.py'):
-                shutil.copy(os.path.join(root,f),pth)
-                print(f)
+    for f in list_of_files:
+        shutil.copy(f,pth)
+        print(f"file moved {f}")
