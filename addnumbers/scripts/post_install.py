@@ -13,7 +13,8 @@ def install():
     print(f"new folder path: {pth}")
     for f in current:
         if f.endswith(".py"):
-            shutil.copy(f,pth)
+            file = current + "/" + f
+            shutil.copy(file,pth)
             print(f"{f} was moved...")
         print("end...")
 
