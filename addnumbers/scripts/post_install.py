@@ -12,8 +12,5 @@ def install():
     print("Running Post Install...")
     print(f"new folder path: {pth}")
     for f in list_of_files:
-        print (f)
-        shutil.copy(f,pth, follow_symlinks=True)
-        print(f"{f} was moved...")
-        print("end...")
+        print(f)
 
