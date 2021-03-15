@@ -11,3 +11,4 @@ def install():
         for f in files:
             if f.endswith('.py'):
                 shutil.copy(os.path.join(root,f),pth)
+                print(f)
