@@ -20,7 +20,7 @@ s(
     zip_safe=False,
     entry_points={
         'console_scripts':[
-            'post_install = post_install.install'
+            'post_install = post_install:install'
         ],
     },
 )
