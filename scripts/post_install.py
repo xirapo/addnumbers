@@ -1,17 +1,20 @@
 import pathlib, os, sys, shutil
 
-current = "./add2numbers/addnumbers"
-list_of_files =os.listdir(current)
-FILES_TO_BE_MOVE = [
-    '__init__.py',
-    'main.py'
-]
+current_path =pathlib.Path(__file__).parent.absolute()
+RESOLVER_DIR_NAME ='addnumbers'
 
 def install():
-    pth = sys.argv[1]
+    resolver_path = sys.argv[1]
     print("Running Post Install...")
-    print(f"new folder path: {pth}")
+    print(f"new folder path: ")
+    current = os.path.split(current_path)
+    path = os.path.join(current[0],RESOLVER_DIR_NAME)
+    print(f"copy files from: {path}")
+    print(f"to new path {resolver_path}")
+    list_of_files = os.listdir(path)
     for f in list_of_files:
-        print("files:")
-        print(f)
+        if f.endswith('.py'):
+            print(f)
 
+
+install()
