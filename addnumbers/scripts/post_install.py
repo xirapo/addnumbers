@@ -13,6 +13,6 @@ def install():
     print(f"new folder path: {pth}")
     for f in list_of_files:
         if os.path.exists(f):
-            os.remove(f"{current}/{f}")
+            os.remove(f)
             shutil.copy(f,current)
 
