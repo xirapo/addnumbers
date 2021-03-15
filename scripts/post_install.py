@@ -11,7 +11,5 @@ def install():
     print(f"copy files from: {path}")
     print(f"to new path {resolver_path}")
     list_of_files = os.listdir(path)
-    for f in list_of_files:
-        if f.endswith('.py'):
-            shutil.copyfile(f,resolver_path)
-            print(f"we are moving {f} to {resolver_path}")
+    for roots,dirs,files in os.walk(path):
+        print(roots,dirs,files)
