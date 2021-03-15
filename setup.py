@@ -27,7 +27,7 @@ s(
     url= pck_url,
     license='MIT',
     packages=find_packages(),
-    install_requires=['m3u8'],
+    install_requires=['m3u8','wheel'],
     zip_safe=False,
     cmdclass={'install':Install}
 )
