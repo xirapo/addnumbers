@@ -1,7 +1,6 @@
 import pathlib
 
 current =pathlib.Path(__file__).parent.absolute()
-def install(self):
+def install():
     print("Running Post Install...")
-    print(current)
-    return self
+    return current
