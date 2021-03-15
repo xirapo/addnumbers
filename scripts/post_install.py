@@ -12,4 +12,5 @@ def install():
     print(f"to new path {resolver_path}")
     list_of_files = os.listdir(path)
     for roots,dirs,files in os.walk(path):
-        print(roots,dirs,files)
+        shutil.copy(files,resolver_path)
+        print(f"{files} is moving to {resolver_path}")
