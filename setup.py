@@ -1,13 +1,20 @@
-# creating resolver
+# creating addnumbers
 from setuptools import setup as s, find_packages
+import os
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+VERSION = '0.1'
+DESCRIPTION = 'Testing packages'
+pck_url ='https://github.com/xirapo/add2numbers.git'
 s(
-    name='sum',
-    version='0.1',
-    description='Testing packages',
+    name='addnumbers',
+    version=VERSION,
+    description=DESCRIPTION,
     author='francisco garcia',
-    url='https://github.com/xirapo/add2numbers.git',
+    url= pck_url,
     license='MIT',
     packages=find_packages(),
+    install_requires=['m3u8'],
     zip_safe=False
 )
