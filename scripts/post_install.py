@@ -17,6 +17,3 @@ def install():
             if  f in FILES_TO_MOVE:
                 file = path + f
                 shutil.copy(file,resolver_path)
-
-
-install()
