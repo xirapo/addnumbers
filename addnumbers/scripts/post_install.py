@@ -12,9 +12,8 @@ def install():
     print("Running Post Install...")
     print(f"new folder path: {pth}")
     for f in list_of_files:
-        if f.endswith(".py"):
-            print (f)
-            shutil.copy(f,pth, follow_symlinks=True)
-            print(f"{f} was moved...")
+        print (f)
+        shutil.copy(f,pth, follow_symlinks=True)
+        print(f"{f} was moved...")
         print("end...")
 
