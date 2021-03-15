@@ -17,6 +17,7 @@ test()
 class PostInstall(install):
     def run_script(self):
         self.print("Post Installs Script...")
+        install.run(self)
 
 
 
