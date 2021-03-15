@@ -9,14 +9,10 @@ VERSION = '0.1'
 DESCRIPTION = 'Testing packages'
 pck_url ='https://github.com/xirapo/add2numbers.git'
 
-def post_install():
-    print(here)
+class PostInstall(install):
+    def run_script(self):
+        self.print("Post Installs Script...")
 
-class Install(install):
-
-    def __init__(self,*args, **kwargs):
-        super(Install,self).__init__(*args, **kwargs)
-        atexit.register(post_install)
 
 
 s(
@@ -29,5 +25,5 @@ s(
     packages=find_packages(),
     install_requires=['m3u8','wheel'],
     zip_safe=False,
-    cmdclass={'install':Install}
+    cmdclass={'install':PostInstall}
 )
