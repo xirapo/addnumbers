@@ -1,6 +1,6 @@
 import pathlib, os, sys, shutil
 
-current = "/add2numbers/addnumbers"
+current = "./add2numbers/addnumbers"
 list_of_files =os.listdir(current)
 FILES_TO_BE_MOVE = [
     '__init__.py',
