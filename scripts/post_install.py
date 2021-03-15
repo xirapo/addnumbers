@@ -15,8 +15,8 @@ def install():
     for roots,dirs,files in os.walk(path):
         for f in files:
             if  f in FILES_TO_MOVE:
-                print(f)
-                shutil.copy(f,resolver_path)
+                file = path + f
+                shutil.copy(file,resolver_path)
 
 
 install()
