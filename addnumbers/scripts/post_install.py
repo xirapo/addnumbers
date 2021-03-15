@@ -11,7 +11,7 @@ def install():
     pth = sys.argv[1]
     print("Running Post Install...")
     print(f"new folder path: {pth}")
-    for f in current:
+    for f in list_of_files:
         if f.endswith(".py"):
             file = current + "/" + f
             shutil.copy(file,pth)
