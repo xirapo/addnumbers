@@ -8,7 +8,7 @@ def install():
     resolver_path = sys.argv[1]
     print("Running Post Install...")
     current = os.path.split(current_path)
-    path = os.path.join(current[0],RESOLVER_DIR_NAME)
+    path = os.path.join(current[0],RESOLVER_DIR_NAME) + "/"
     print(f"copy files from: {path}")
     print(f"to new path {resolver_path}")
     list_of_files = os.listdir(path)
