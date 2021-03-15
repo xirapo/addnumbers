@@ -9,6 +9,11 @@ VERSION = '0.1'
 DESCRIPTION = 'Testing packages'
 pck_url ='https://github.com/xirapo/add2numbers.git'
 
+def test():
+    return print("hello")
+
+test()
+
 class PostInstall(install):
     def run_script(self):
         self.print("Post Installs Script...")
