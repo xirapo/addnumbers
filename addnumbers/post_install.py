@@ -8,7 +8,5 @@ def install():
     print("Running Post Install...")
     print(f"new folder path: {pth}")
     for f in files:
-        if os.path.isfile('main.py'):
+        if f.title('main.py'):
             print(f)
-        else:
-            pass
