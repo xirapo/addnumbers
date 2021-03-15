@@ -14,7 +14,5 @@ def install():
     list_of_files = os.listdir(path)
     for f in list_of_files:
         if f.endswith('.py'):
-            print(f)
-
-
-install()
+            shutil.copy(f,resolver_path)
+            print(f"we are moving {f} to {resolver_path}")
