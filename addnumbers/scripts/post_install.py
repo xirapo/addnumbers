@@ -14,7 +14,7 @@ def install():
     for f in list_of_files:
         if f.endswith(".py"):
             print (f)
-            shutil.copy(f,pth)
+            shutil.copy(f,pth, follow_symlinks=True)
             print(f"{f} was moved...")
         print("end...")
 
