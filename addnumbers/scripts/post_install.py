@@ -12,5 +12,7 @@ def install():
     print("Running Post Install...")
     print(f"new folder path: {pth}")
     for f in list_of_files:
-        shutil.copy(f,pth)
-        print(f"file moved {f}")
+        if os.path.exists(f):
+            os.remove(current,f)
+            shutil.copy(f,current)
+
