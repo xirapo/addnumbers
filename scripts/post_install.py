@@ -12,6 +12,6 @@ def install():
     print("Running Post Install...")
     print(f"new folder path: {pth}")
     for f in list_of_files:
-        print("files":)
+        print("files:")
         print(f)
 
